@@ -1,0 +1,70 @@
+/* Resources used...
+ * http://stackoverflow.com/questions/9925754/css-horizontal-scroll
+ * http://stackoverflow.com/questions/9601357/placing-border-inside-of-div-and-not-on-its-edge
+ * Background: http://subtlepatterns.com/dark-embroidery/
+ */
+
+html, body {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	min-height: 100%;
+	background-color: #1a1a1a;
+	background: url(images/dark_embroidery.png);
+}
+
+.img-gallery {
+	text-align: center;
+}
+
+.img-expanded {
+	/*background: grey;*/
+	/*padding: 20px;*/
+	position: absolute;
+	height: 60%;
+	width: 100%;
+	top: 10%;
+}
+
+.img-expanded img {
+	height: 500px;
+	box-shadow: 0 0 50px 5px #1a1a1a;
+}
+
+.img-choices-wrapper {
+	position: absolute;
+	max-width: 100%;
+	bottom: 60px;
+	height: 20%;
+}
+
+.img-choices {
+	/*height: 220px;*/
+	height: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	position: relative;
+	padding: 30px 0;
+	background: #1a1a1a;
+	box-shadow: 0 0 20px 0 #111;
+	border-top: 1px solid #333;
+}
+
+.img-choices img {
+	height: 100%;
+	margin: 0 -2px;
+	vertical-align: middle;
+	cursor: pointer;
+	overflow: hidden;
+	/*box-sizing: border-box;*/
+  	/*-moz-box-sizing:border-box;*/
+  	/*-webkit-box-sizing:border-box;*/
+  	letter-spacing: 0;
+  	word-spacing: 0;
+}
+
+img.img-selected {
+	border: 10px solid orange;
+	margin: 0 -1px;
+}
