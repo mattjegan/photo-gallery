@@ -18,17 +18,13 @@ html, body {
 }
 
 .img-expanded {
-	/*background: grey;*/
-	/*padding: 20px;*/
 	position: absolute;
 	height: 60%;
 	width: 100%;
-	/*top: 10%;*/
 	padding-top: 3%;
 }
 
 .img-expanded img {
-	/*height: 500px;*/
 	height: 100%;
 	box-shadow: 0 0 50px 5px #1a1a1a;
 }
@@ -36,18 +32,17 @@ html, body {
 .img-choices-wrapper {
 	position: absolute;
 	max-width: 100%;
-	bottom: 60px;
+	bottom: 51px;
 	height: 20%;
 }
 
 .img-choices {
-	/*height: 220px;*/
 	height: 100%;
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
 	position: relative;
-	padding: 30px 0;
+	padding: 20px 0 30px 0;
 	background: #1a1a1a;
 	box-shadow: 0 0 20px 0 #111;
 	border-top: 1px solid #333;
