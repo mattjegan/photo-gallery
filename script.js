@@ -16,23 +16,20 @@ $(document).ready(function(){
 	var cycleImages = function() {
 		setTimeout(function(){
 			// Change highlighted image choice
-			$(currentSelected).next().addClass('img-selected');
-			$(currentSelected).removeClass('img-selected');
-
-			// If .img-selected is last child, restart cycle
-			// if ($('.img-selected').is(':last-child') === false) {
+			// if ($(currentSelected).is(':last-child') == false) {
+			// 	console.log('cycling');
 			// 	$(currentSelected).next().addClass('img-selected');
 			// 	$(currentSelected).removeClass('img-selected');
-			// 	// currentSelected = $('.img-selected');
+			// 	currentSelected = $('.img-selected');
 			// }
-			// else if ($('.img-selected').is(':last-child')) {
-			// 	console.log('last');
-			// 	$('.img-selected').removeClass('img-selected');
-			// 	$('.img-choices').first().addClass('img-selected');
-
+			// else if ($(currentSelected).is(':last-child') == true) {
+			// 	console.log('last child reached');
+			// 	$(currentSelected).removeClass('img-selected');
+			// 	$('img-choices img:first-child').addClass('img-selected');
+			// 	currentSelected = $('.img-selected');
 			// }
 
-			currentSelected = $('.img-selected');
+			// currentSelected = $('.img-selected');
 
 			// Change expanded image
 			$('.img-expanded').html('<img src=' + $(currentSelected).attr('src') + '>');
@@ -69,4 +66,8 @@ $(document).ready(function(){
 		});
 	}
 	);
+
+	// Delete this
+	$('.img-choices:last-child').css('border', '10px solid red');
+
 });
