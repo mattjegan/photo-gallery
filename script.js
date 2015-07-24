@@ -8,43 +8,6 @@ $(document).ready(function(){
 	var firstImageSrc = $('.img-choices').children().first().attr('src');
 	$('.img-expanded').html('<img src=' + firstImageSrc + '>');
 
-	// Cycle through images automatically
-	// console.log('Next: ' + $(this).next().attr('src'));
-
-	var currentSelected = $('.img-selected');
-
-	var cycleImages = function() {
-		setTimeout(function(){
-			// Change highlighted image choice
-			// if ($(currentSelected).is(':last-child') == false) {
-			// 	console.log('cycling');
-			// 	$(currentSelected).next().addClass('img-selected');
-			// 	$(currentSelected).removeClass('img-selected');
-			// 	currentSelected = $('.img-selected');
-			// }
-			// else if ($(currentSelected).is(':last-child') == true) {
-			// 	console.log('last child reached');
-			// 	$(currentSelected).removeClass('img-selected');
-			// 	$('img-choices img:first-child').addClass('img-selected');
-			// 	currentSelected = $('.img-selected');
-			// }
-
-			// currentSelected = $('.img-selected');
-
-			// Change expanded image
-			$('.img-expanded').html('<img src=' + $(currentSelected).attr('src') + '>');
-			
-			// Call function again after it finishes, making it loop
-			cycleImages();
-		}, 5000);
-	}
-
-	cycleImages();
-
-	// setTimeout(function(){
-	// 	cycleImages();
-	// },3000);
-
 	$('.img-choices img').click(function(){
 		$('.img-expanded').html('<img src=' + $(this).attr('src') + '>');
 		$('.img-selected').removeClass('img-selected');
@@ -66,8 +29,5 @@ $(document).ready(function(){
 		});
 	}
 	);
-
-	// Delete this
-	$('.img-choices:last-child').css('border', '10px solid red');
 
 });
